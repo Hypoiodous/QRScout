@@ -143,12 +143,12 @@
           "code": "pkup",
           "choices": {
             "Bt": "Both",
-            "Gr": "Ground"
+            "Gr": "Ground",
             "Sc": "Source",
             "No": "None"
           },
-          "defaultValue": "Both"
-          "required": false,
+          "defaultValue": "Both",
+          "required": false
         }
       ]
     },
