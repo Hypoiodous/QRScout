@@ -142,13 +142,13 @@
           "type": "select",
           "code": "pkup",
           "choices": {
-            "Bt": "Both"
+            "Bt": "Both",
             "Gr": "Ground"
-            "Sc": "Source:
-            "No": "None",
+            "Sc": "Source",
+            "No": "None"
           },
           "defaultValue": "Both"
-          "required": false
+          "required": false,
         }
       ]
     },
@@ -200,10 +200,10 @@
           "title": "Offense Skill",
           "type": "select",
           "choices": {
-            "x": "Not Observed"
+            "x": "Not Observed",
             "1": "Not Effective",
             "2": "Average",
-            "3": "Very Effective",
+            "3": "Very Effective"
 
           },
           "defaultValue": "x",
@@ -214,10 +214,10 @@
           "title": "Defense Skill",
           "type": "select",
           "choices": {
-            "x": "Not Observed"
+            "x": "Not Observed",
             "1": "Not Effective",
             "2": "Average",
-            "3": "Very Effective",
+            "3": "Very Effective"
 
           },
           "defaultValue": "x",
