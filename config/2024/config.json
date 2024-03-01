@@ -60,24 +60,10 @@
     {
       "name": "Autonomous",
       "fields": [
-        {
-          "title": "Mobility?",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false,
-          "code": "Mved"
-        },
+
         {
           "code": "auamp",
           "title": "Amp Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
-          "code": "auampm",
-          "title": "Amp Missed",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -92,12 +78,19 @@
           "required": false
         },
         {
-          "code": "auskpm",
-          "title": "Speaker Missed",
+          "code": "almn",
+          "title": "Loaded More Notes?",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
+        },
+        {
+          "title": "Leave Bonus?",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false,
+          "code": "Left"
         },
         {
           "code": "auf",
@@ -128,14 +121,6 @@
           "required": false
         },
         {
-          "code": "tampm",
-          "title": "Amp Missed",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
           "code": "tsc",
           "title": "Speaker Scored",
           "type": "counter",
@@ -144,26 +129,25 @@
           "required": false
         },
         {
-          "code": "tsm",
-          "title": "Speaker Missed",
+          "code": "lmn",
+          "title": "Loaded more notes?",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
+
         {
-          "code": "cn",
-          "title": "Note in Trap?",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
-          "code": "Fou/Tech",
-          "title": "Teleop Foul",
-          "type": "counter",
-          "defaultValue": 0,
+          "title": "Note Pickup Location",
+          "type": "select",
+          "code": "pkup",
+          "choices": {
+            "Bt": "Both"
+            "Gr": "Ground"
+            "Sc": "Source:
+            "No": "None",
+          },
+          "defaultValue": "Both"
           "required": false
         }
       ]
@@ -181,9 +165,17 @@
             "Fc": "Failed Climb",
             "P": "Parked",
             "Os": "Onstage",
-            "Sl": "Spotlight"
+            "Sl": "Spotlit"
           },
           "defaultValue": "No Climb"
+        },
+        {
+          "code": "trap",
+          "title": "Scored in Trap?",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
         },
         {
           "title": "Harmony",
@@ -208,11 +200,13 @@
           "title": "Offense Skill",
           "type": "select",
           "choices": {
+            "x": "Not Observed"
             "1": "Not Effective",
             "2": "Average",
             "3": "Very Effective",
-            "x": "Not Observed"
+
           },
+          "defaultValue": "x",
           "required": false
         },
         {
@@ -220,10 +214,11 @@
           "title": "Defense Skill",
           "type": "select",
           "choices": {
+            "x": "Not Observed"
             "1": "Not Effective",
             "2": "Average",
             "3": "Very Effective",
-            "x": "Not Observed"
+
           },
           "defaultValue": "x",
           "required": false
